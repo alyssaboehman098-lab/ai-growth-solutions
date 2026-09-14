@@ -146,7 +146,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-10 text-center text-gray-500">
-        © 2026 AI Growth Solutions. All Rights Reserved.
+        © 2026 AI Growthf Solutions. All Rights Reserved.
       </footer>
     </main>
   );
