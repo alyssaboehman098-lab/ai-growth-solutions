@@ -149,10 +149,10 @@ export default function Home() {
       <nav className="sticky top-0 z-20 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <a href="#top" className="flex items-center gap-3 text-xl font-bold text-white">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 text-sm font-black text-slate-950">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-blue-600 text-sm font-black text-slate-950">
               A
             </span>
-            <span className="text-cyan-400">Alyssa AI Solutions</span>
+            <span className="text-orange-400">Alyssa AI Solutions</span>
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
@@ -171,7 +171,7 @@ export default function Home() {
             href="https://calendly.com/alyssaboehman098/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-600 sm:px-5"
+            className="rounded-lg bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-600 sm:px-5"
           >
             Book a Call
           </a>
@@ -181,13 +181,13 @@ export default function Home() {
       <section id="top" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="text-center lg:text-left">
-            <div className="mb-6 inline-flex rounded-full border border-cyan-500/40 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-300">
+            <div className="mb-6 inline-flex rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-300">
               AI Automation for Local Service Businesses
             </div>
 
             <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
               Stop Losing Leads to Slow Follow-Up
-              <span className="block text-cyan-400">and Manual Work</span>
+              <span className="block text-orange-400">and Manual Work</span>
             </h1>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-300 lg:mx-0 lg:text-lg">
@@ -200,15 +200,15 @@ export default function Home() {
                 href="https://calendly.com/alyssaboehman098/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl bg-cyan-500 px-7 py-4 text-base font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+                className="rounded-xl bg-orange-500 px-7 py-4 text-base font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600"
               >
-                Claim My Free AI Audit
+                Get My Free Audit
               </a>
               <a
                 href="#services"
-                className="rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-4 text-base font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
+                className="rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-4 text-base font-semibold text-white transition hover:border-orange-400 hover:text-orange-300"
               >
-                View Services
+                
               </a>
             </div>
 
@@ -218,9 +218,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-2xl shadow-cyan-950/40 sm:p-6">
+          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-2xl shadow-orange-950/40 sm:p-6">
             <div className="mb-5 flex items-center justify-between">
-              <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">Business Snapshot</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-orange-300">Business Snapshot</p>
               <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-300">
                 Live opportunities
               </span>
@@ -229,7 +229,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="rounded-2xl bg-slate-950 p-4">
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Response time</p>
-                <p className="mt-2 text-3xl font-black text-cyan-400">Instant</p>
+                <p className="mt-2 text-3xl font-black text-orange-400">Instant</p>
               </div>
 
               <div className="space-y-3 rounded-2xl bg-slate-950 p-4">
@@ -238,7 +238,7 @@ export default function Home() {
                   <span className="font-semibold text-white">94%</span>
                 </div>
                 <div className="h-2 rounded-full bg-slate-800">
-                  <div className="h-2 w-[94%] rounded-full bg-cyan-500" />
+                  <div className="h-2 w-[94%] rounded-full bg-orange-500" />
                 </div>
 
                 <div className="flex items-center justify-between text-sm text-slate-300">
@@ -246,11 +246,11 @@ export default function Home() {
                   <span className="font-semibold text-white">2 min</span>
                 </div>
                 <div className="h-2 rounded-full bg-slate-800">
-                  <div className="h-2 w-[85%] rounded-full bg-cyan-500" />
+                  <div className="h-2 w-[85%] rounded-full bg-orange-500" />
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-4 text-sm text-slate-200">
+              <div className="rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4 text-sm text-slate-200">
                 “Most businesses lose leads because they respond too slowly or not at all.”
               </div>
             </div>
@@ -263,7 +263,7 @@ export default function Home() {
           <div className="grid gap-4 text-center sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="stat-card rounded-2xl bg-slate-950/60 p-5">
-                <div className="text-3xl font-black text-cyan-400 tabular-nums">{stat.value}</div>
+                <div className="text-3xl font-black text-orange-400 tabular-nums">{stat.value}</div>
                 <div className="mt-2 text-sm text-slate-300">{stat.label}</div>
               </div>
             ))}
@@ -288,14 +288,14 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Why choose us</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Why choose us</p>
           <h2 className="text-3xl font-black sm:text-4xl">A smart system built for growth, not guesswork</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/10 text-lg font-bold text-cyan-300">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-orange-500/10 text-lg font-bold text-orange-300">
                 ✓
               </div>
               <h3 className="mb-3 text-xl font-bold text-white">{benefit.title}</h3>
@@ -307,14 +307,14 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Results</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Results</p>
           <h2 className="text-3xl font-black sm:text-4xl">What business owners are saying</h2>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div key={testimonial.name} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-              <div className="mb-5 flex gap-1 text-cyan-400">
+              <div className="mb-5 flex gap-1 text-orange-400">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <span key={`${testimonial.name}-${index}`}>★</span>
                 ))}
@@ -331,14 +331,14 @@ export default function Home() {
 
       <section id="services" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Services</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Services</p>
           <h2 className="text-3xl font-black sm:text-4xl">Automation that saves time and converts more leads</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           {services.map((service) => (
             <div key={service.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-lg shadow-slate-950/30">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/10 text-xl text-cyan-300">
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-orange-500/10 text-xl text-orange-300">
                 ✦
               </div>
               <h3 className="mb-3 text-2xl font-bold">{service.title}</h3>
@@ -350,14 +350,14 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Process</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Process</p>
           <h2 className="text-3xl font-black sm:text-4xl">A simple path from missed leads to more booked calls</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {steps.map((step) => (
             <div key={step.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-              <h3 className="mb-3 text-2xl font-bold text-cyan-400">{step.title}</h3>
+              <h3 className="mb-3 text-2xl font-bold text-orange-400">{step.title}</h3>
               <p className="text-slate-300">{step.description}</p>
             </div>
           ))}
@@ -366,7 +366,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">How to get started</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">How to get started</p>
           <h2 className="text-3xl font-black sm:text-4xl">A clear path to your first automation win</h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-300">
             No long-term commitment is required to begin. We start with one measurable problem and build from there.
@@ -375,7 +375,7 @@ export default function Home() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {engagementSteps.map((step) => (
-            <div key={step.title} className="rounded-3xl border border-cyan-500/20 bg-cyan-500/5 p-6">
+            <div key={step.title} className="rounded-3xl border border-orange-500/20 bg-orange-500/5 p-6">
               <h3 className="mb-3 text-xl font-bold text-white">{step.title}</h3>
               <p className="text-sm leading-relaxed text-slate-300">{step.description}</p>
             </div>
@@ -385,7 +385,7 @@ export default function Home() {
 
       <section id="pricing" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Pricing</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Pricing</p>
           <h2 className="text-3xl font-black sm:text-4xl">Choose a path that fits your business</h2>
         </div>
 
@@ -395,14 +395,14 @@ export default function Home() {
               key={plan.name}
               className={`rounded-3xl border p-6 ${
                 plan.highlighted
-                  ? "border-cyan-400 bg-cyan-500/5 shadow-xl shadow-cyan-500/10"
+                  ? "border-orange-400 bg-orange-500/5 shadow-xl shadow-orange-500/10"
                   : "border-slate-800 bg-slate-900"
               }`}
             >
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-2xl font-bold">{plan.name}</h3>
                 {plan.highlighted ? (
-                  <span className="rounded-full bg-cyan-500 px-2.5 py-1 text-xs font-semibold text-slate-950">
+                  <span className="rounded-full bg-orange-500 px-2.5 py-1 text-xs font-semibold text-slate-950">
                     Most Popular
                   </span>
                 ) : null}
@@ -414,7 +414,7 @@ export default function Home() {
               <ul className="space-y-3 text-sm text-slate-200">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
-                    <span className="mt-1 text-cyan-300">✔</span>
+                    <span className="mt-1 text-orange-300">✔</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -426,8 +426,8 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={`mt-6 inline-flex w-full justify-center rounded-xl px-4 py-3 font-semibold transition ${
                   plan.highlighted
-                    ? "bg-cyan-500 text-white hover:bg-cyan-600"
-                    : "border border-slate-700 bg-slate-950 text-white hover:border-cyan-400 hover:text-cyan-300"
+                    ? "bg-orange-500 text-white hover:bg-orange-600"
+                    : "border border-slate-700 bg-slate-950 text-white hover:border-orange-400 hover:text-orange-300"
                 }`}
               >
                 {plan.name === "Audit" ? "Book My Audit" : "Talk to Alyssa"}
@@ -438,10 +438,10 @@ export default function Home() {
       </section>
 
       <section id="contact" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-        <div className="rounded-[2rem] border border-cyan-500/20 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/30 p-6 sm:p-8 lg:p-10">
+        <div className="rounded-[2rem] border border-orange-500/20 bg-gradient-to-br from-slate-900 via-slate-900 to-orange-950/30 p-6 sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Contact</p>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Contact</p>
               <h2 className="text-3xl font-black sm:text-4xl">Let&apos;s build a smarter growth system for your business</h2>
               <p className="mt-4 max-w-xl text-base text-slate-300">
                 If you&apos;re tired of missed leads, manual follow-up, and repetitive admin work, let&apos;s find the first workflow worth fixing.
@@ -456,7 +456,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Email</p>
-                  <a href="mailto:alyssaboehman098@gmail.com" className="mt-1 inline-block text-base text-cyan-300 hover:text-cyan-200">
+                  <a href="mailto:alyssaboehman098@gmail.com" className="mt-1 inline-block text-base text-orange-300 hover:text-orange-200">
                     alyssaboehman098@gmail.com
                   </a>
                 </div>
@@ -470,7 +470,7 @@ export default function Home() {
                 href="https://calendly.com/alyssaboehman098/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full justify-center rounded-xl bg-cyan-500 px-5 py-3.5 font-semibold text-white transition hover:bg-cyan-600"
+                className="mt-6 inline-flex w-full justify-center rounded-xl bg-orange-500 px-5 py-3.5 font-semibold text-white transition hover:bg-orange-600"
               >
                 Schedule a Discovery Call
               </a>
@@ -504,9 +504,9 @@ export default function Home() {
             href="https://calendly.com/alyssaboehman098/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xl bg-cyan-500 px-8 py-4 text-base font-bold text-white transition hover:bg-cyan-600"
+            className="rounded-xl bg-orange-500 px-8 py-4 text-base font-bold text-white transition hover:bg-orange-600"
           >
-            Claim My Free AI Audit
+            Get My Free Audit
           </a>
         </div>
       </section>
@@ -516,16 +516,16 @@ export default function Home() {
           href="https://calendly.com/alyssaboehman098/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center rounded-xl bg-cyan-500 px-5 py-3 text-base font-bold text-white"
+          className="flex w-full items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-base font-bold text-white"
         >
-          Claim My Free AI Audit
+          Get My Free Audit
         </a>
       </div>
 
       <footer className="border-t border-slate-800 py-10 text-center">
-        <h3 className="mb-2 text-xl font-bold text-cyan-400">Alyssa AI Solutions</h3>
+        <h3 className="mb-2 text-xl font-bold text-orange-400">Alyssa AI Solutions</h3>
         <p className="text-slate-400">Owensboro, Kentucky</p>
-        <a href="mailto:alyssaboehman098@gmail.com" className="mt-2 inline-block text-slate-400 transition hover:text-cyan-300">
+        <a href="mailto:alyssaboehman098@gmail.com" className="mt-2 inline-block text-slate-400 transition hover:text-orange-300">
           alyssaboehman098@gmail.com
         </a>
       </footer>
