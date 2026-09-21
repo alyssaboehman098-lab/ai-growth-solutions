@@ -185,10 +185,19 @@ export default function Home() {
               AI Automation for Local Service Businesses
             </div>
 
-            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              Stop Losing Leads to Slow Follow-Up
-              <span className="block text-orange-400">and Manual Work</span>
-            </h1>
+            <h1 className="mb-6 text-5xl font-black leading-none text-white sm:text-7xl">
+              Find where your{" "}
+              <span className="text-orange-500">
+              business 
+              </span>
+          
+  <br/>
+
+     is leaking {" "}
+ <span className="text-orange-500">
+  revenue.
+</span>
+</h1>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-300 lg:mx-0 lg:text-lg">
               Get a free AI Business Audit and a practical roadmap to capture more inquiries,
