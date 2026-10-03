@@ -1,10 +1,10 @@
 {
-  "selectedGitignoreTemplate" : "None",
-  "gitUserEmail" : "",
-  "gitRemoteURL" : "",
+  "selectedGitignoreTemplate" : "TypeScript",
   "environmentVariables" : [
 
   ],
-  "isGitEnabled" : true,
-  "gitUserName" : ""
+  "gitUserName" : "",
+  "gitRemoteURL" : "",
+  "gitUserEmail" : "",
+  "isGitEnabled" : true
 }
