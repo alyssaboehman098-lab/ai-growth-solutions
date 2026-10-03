@@ -32,4 +32,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
-}
+}SEO metadata updates
