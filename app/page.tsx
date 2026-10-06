@@ -599,5 +599,7 @@ export default function Home() {
         </a>
       </footer>
     </main>
-  );
+  );<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-5734ef44-1bc7-407f-8b1b-e1c57b8a4177" data-elfsight-app-lazy></div>
 }
