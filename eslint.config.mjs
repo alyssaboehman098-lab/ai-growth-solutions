@@ -19,3 +19,19 @@ export default eslintConfig;
 npm install --save-dev eslint@latest @eslint/js@latest
 # Create JavaScript configuration file
 touch eslint.config.js
+import { defineConfig } from "eslint/config";
+import js from "@eslint/js";
+
+export default defineConfig([
+	{
+		files: ["**/*.js"],
+		plugins: {
+			js,
+		},
+		extends: ["js/recommended"],
+		rules: {
+			"no-unused-vars": "warn",
+			"no-undef": "warn",
+		},
+	},
+]);
