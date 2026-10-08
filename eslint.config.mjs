@@ -17,3 +17,5 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 npm install --save-dev eslint@latest @eslint/js@latest
+# Create JavaScript configuration file
+touch eslint.config.js
