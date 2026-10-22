@@ -16,50 +16,50 @@ type Demo = {
 
 const DEMOS: Demo[] = [
   {
-    id: "realtor",
-    label: "Realtor — new lead follow-up",
-    scenario: "A new buyer lead comes in from your website at 8:42 PM — after office hours.",
+    id: "hvac",
+    label: "HVAC — missed-call text-back",
+    scenario: "Your techs are out on a job on the hottest day of the year, and a call comes in.",
     messages: [
-      { from: "system", text: "8:42 PM — New website lead: Sarah, interested in a 3-bed home in Owensboro" },
-      { from: "ai", text: "Hi Sarah! Thanks for reaching out. I'd love to help you find the right home. Are you buying in the next 30–60 days, or just starting to look?" },
-      { from: "lead", text: "Buying soon — we are pre-approved and want to see homes this week." },
-      { from: "ai", text: "Perfect, and congratulations on the pre-approval! I can set you up for a showing tour on Thursday or Friday. Which works better?" },
-      { from: "lead", text: "Thursday afternoon would be great." },
-      { from: "ai", text: "Done — you're booked for Thursday at 2:00 PM. I've sent a confirmation to your phone, and your agent has all your details." },
+      { from: "system", text: "1:47 PM — Missed call from a new number while the crew is on a job" },
+      { from: "ai", text: "Hi, this is CoolAir Heating & Air — sorry we missed your call! How can we help you today?" },
+      { from: "lead", text: "Our AC stopped cooling and the house is already at 84 degrees." },
+      { from: "ai", text: "I'm sorry — let's get that fixed today. I have a technician open for a same-day diagnostic visit between 4–6 PM. Would that work?" },
+      { from: "lead", text: "Yes, please — 4–6 works." },
+      { from: "ai", text: "You're booked for today, 4–6 PM. Your tech will text you when he's on the way. Stay cool in the meantime!" },
     ],
-    outcomeTitle: "Result: Showing booked",
-    outcomeText: "Lead answered in under 1 minute, qualified, and booked — without the agent lifting a finger after hours.",
+    outcomeTitle: "Result: Same-day visit booked",
+    outcomeText: "Booked: same-day diagnostic visit — a job that would have gone to the next company on Google.",
   },
   {
-    id: "home",
-    label: "Home services — missed-call text-back",
-    scenario: "Your crew is on a job and misses a call from a homeowner with a burst pipe.",
+    id: "plumbing",
+    label: "Plumbing — instant web lead",
+    scenario: "A homeowner submits your website form at 9:40 PM — your office has been closed for hours.",
     messages: [
-      { from: "system", text: "10:15 AM — Missed call from a new number while the team is on a job" },
-      { from: "ai", text: "Hi, this is BlueWave Homes — sorry we missed your call! How can we help you today?" },
-      { from: "lead", text: "We have a burst pipe and water everywhere. Can someone come today?" },
-      { from: "ai", text: "I'm so sorry — that sounds stressful. I can get a technician out today between 1–3 PM. Is the water shut off at the main valve?" },
-      { from: "lead", text: "Yes, we shut it off. 1–3 works, please send someone." },
-      { from: "ai", text: "You're booked for today, 1–3 PM. A technician will text you when he's on the way. Anything else you need in the meantime?" },
+      { from: "system", text: "9:40 PM — New website form lead: Marcus, water heater leaking in his basement" },
+      { from: "ai", text: "Hi Marcus, this is Rapid Flow Plumbing — thanks for reaching out! Is the leaking getting worse, or is it a slow drip for now?" },
+      { from: "lead", text: "It's pooling on the floor. We shut the water off to it." },
+      { from: "ai", text: "Good call shutting it off. Which part of town are you in, and could you send a quick photo of the label on the unit? That helps us bring the right replacement." },
+      { from: "lead", text: "East side of Owensboro. Just sent the photo." },
+      { from: "ai", text: "Got it — thanks! I booked you an emergency visit tomorrow between 8–10 AM. Your plumber will text before he heads over." },
     ],
-    outcomeTitle: "Result: Callback saved, job booked",
-    outcomeText: "Instead of that caller ringing the next plumber on Google, the missed call turned into a same-day booking.",
+    outcomeTitle: "Result: Emergency visit booked",
+    outcomeText: "Lead answered in under a minute while the office was closed — qualified and booked for first thing in the morning.",
   },
   {
-    id: "dentist",
-    label: "Dentist — appointment booking",
-    scenario: "A patient finds your practice on a Sunday evening and visits your website.",
+    id: "cleaning",
+    label: "Home cleaning — booking & reminders",
+    scenario: "A busy homeowner lands on a cleaning company's website on her lunch break.",
     messages: [
-      { from: "system", text: "Sunday 7:03 PM — Website visitor opens the chat on Crest Dental" },
-      { from: "lead", text: "Hi, do you have any cleaning appointments this week?" },
-      { from: "ai", text: "Hi! We do — I have Wednesday at 9:00 AM or Friday at 11:30 AM open for a cleaning. Would either of those work for you?" },
-      { from: "lead", text: "Wednesday at 9 works for me." },
-      { from: "ai", text: "Great! I just need your name and best phone number for the reminder text." },
-      { from: "lead", text: "It's Angela — 270-555-0148" },
-      { from: "ai", text: "You're all set for Wednesday at 9:00 AM, Angela. We'll text you a reminder the day before. See you soon!" },
+      { from: "system", text: "12:18 PM — Website visitor opens the chat on BrightNest Cleaning" },
+      { from: "lead", text: "Hi, how much for a recurring house cleaning? 3-bed home." },
+      { from: "ai", text: "Hi! For a 3-bedroom home, recurring cleans start with a first deep clean, then regular visits every 2 weeks. Want me to book your first clean?" },
+      { from: "lead", text: "Yes — is Saturday morning open?" },
+      { from: "ai", text: "It is — you're booked for Saturday at 9:00 AM. I'll send a confirmation now and a reminder the day before." },
+      { from: "lead", text: "Actually, can we move it to next Saturday instead?" },
+      { from: "ai", text: "Of course — moved to next Saturday at 9:00 AM, and your reminder will update automatically. Anything else?" },
     ],
-    outcomeTitle: "Result: Appointment booked",
-    outcomeText: "A Sunday-evening visitor became a booked patient — no Monday-morning phone tag, no lost patient.",
+    outcomeTitle: "Result: Recurring client booked",
+    outcomeText: "Booked recurring client, rescheduled by one simple text — zero phone tag.",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function DemoSection() {
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Demo</p>
         <h2 className="text-3xl font-black sm:text-4xl">See it in action</h2>
         <p className="mx-auto mt-4 max-w-2xl text-slate-300">
-          This is what happens, automatically, when a lead reaches out to a business using Alyssa AI Solutions. Pick a scenario and watch it play out.
+          This is what happens, automatically, when a lead reaches out to a home service business using Alyssa AI Solutions. Pick a scenario and watch it play out.
         </p>
       </div>
 

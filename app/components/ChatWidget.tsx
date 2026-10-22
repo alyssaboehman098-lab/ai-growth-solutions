@@ -16,13 +16,13 @@ function answerFor(input: string): string {
     return "Here's our simple pricing:\n• Free AI Business Audit — $0 (website & lead-flow review + a prioritized action plan)\n• Launch — $499 (AI chatbot setup, lead response workflow, and calendar booking integration)\n• Growth — Custom (custom workflows, multi-step follow-up, and monthly optimization)\nMost clients start with the free audit. Want me to help you book one?";
   }
   if (t.includes("service") || t.includes("what do you do") || t.includes("offer")) {
-    return "We help local service businesses stop losing leads with:\n• AI Chatbots — capture & qualify leads 24/7\n• Lead Follow-Up — automatic email & SMS follow-up\n• Appointment Booking — no more back-and-forth scheduling\n• Workflow Automation — less admin, more revenue work\nCheck out the Demo section on this page to see it in action!";
+    return "We help home service businesses stop losing leads with:\n• AI Chatbots — capture & qualify leads 24/7\n• Lead Follow-Up — automatic email & SMS follow-up\n• Appointment Booking — no more back-and-forth scheduling\n• Workflow Automation — less admin, more revenue work\nCheck out the Demo section on this page to see it in action!";
   }
   if (t.includes("how long") || t.includes("setup") || t.includes("set up") || t.includes("timeline")) {
     return "Most automation systems are set up within a few days, depending on how much customization you need. And no — you don't need any technical experience. Everything is handled for you.";
   }
-  if (t.includes("who") || t.includes("realtor") || t.includes("dentist") || t.includes("insurance") || t.includes("business")) {
-    return "We work with realtors, home service companies, dentists, insurance agencies, and other local businesses that want more leads and less manual work. Want a free audit for your business?";
+  if (t.includes("who") || t.includes("hvac") || t.includes("plumb") || t.includes("roof") || t.includes("clean") || t.includes("realtor") || t.includes("dentist") || t.includes("insurance") || t.includes("business")) {
+    return "We specialize in home service businesses — HVAC, plumbing, roofing, cleaning, and contractors — that want more booked jobs and less manual work. Run a real estate, dental, or insurance business? We build the same lead-response system for you too. Want a free audit for your business?";
   }
   if (t.includes("book") || t.includes("audit") || t.includes("call") || t.includes("appointment")) {
     return "Great choice! You can book your free 30-minute AI Business Audit here: " + CALENDLY + "\nOr tap 'Get my free audit' below and I'll collect a few details first so Alyssa is prepared for your call.";
@@ -39,7 +39,7 @@ function answerFor(input: string): string {
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
-    { from: "bot", text: "Hi! I'm Alyssa's AI assistant — this is a live example of the kind of chatbot we build for local businesses. Ask me about services or pricing, or tap 'Book a free audit' to get started." },
+    { from: "bot", text: "Hi! I'm Alyssa's AI assistant — we build chatbots and instant lead follow-up for home service businesses like HVAC, plumbing, roofing, cleaning, and contractors. This chat is a live example of what we build. Ask me about services or pricing, or tap 'Book a free audit' to get started." },
   ]);
   const [input, setInput] = useState("");
   const [leadStep, setLeadStep] = useState<LeadStep>("idle");
@@ -68,7 +68,7 @@ export default function ChatWidget() {
     if (leadStep === "name") {
       setLead((l) => ({ ...l, name: text }));
       setLeadStep("business");
-      push("bot", `Nice to meet you, ${text}! What type of business do you run? (e.g. realtor, home services, dental, insurance)`);
+      push("bot", `Nice to meet you, ${text}! What type of business do you run? (e.g. HVAC, plumbing, roofing, cleaning, electrical)`);
     } else if (leadStep === "business") {
       setLead((l) => ({ ...l, business: text }));
       setLeadStep("contact");

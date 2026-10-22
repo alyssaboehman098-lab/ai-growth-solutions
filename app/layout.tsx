@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Alyssa AI Solutions | AI Chatbots & Lead Follow-Up for Local Businesses";
+const siteTitle = "Alyssa AI Solutions | AI Chat & Lead Follow-Up for Home Service Businesses";
 const siteDescription =
-  "Alyssa AI Solutions in Owensboro, KY builds AI chatbots, instant lead follow-up, and automated booking for local service businesses. Get a free AI audit.";
+  "AI chat, missed-call text-back & instant lead follow-up for HVAC, plumbing, roofing & cleaning companies in the Owensboro, KY area. Free AI audit.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -48,6 +48,7 @@ const jsonLd = {
   url: "https://www.alyssaautomation.com",
   email: "alyssaboehman098@gmail.com",
   description: siteDescription,
+  serviceType: "AI chatbot and lead follow-up automation for home service businesses",
   priceRange: "$0 - $499+",
   address: {
     "@type": "PostalAddress",

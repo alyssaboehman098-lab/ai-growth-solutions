@@ -53,7 +53,7 @@ const pricing = [
   {
     name: "Launch",
     price: "$499",
-    description: "A focused setup for local service businesses ready to capture, follow up, and book more leads.",
+    description: "A focused setup for home service businesses ready to capture, follow up, and book more jobs.",
     features: ["AI chatbot setup", "Lead response workflow", "Calendar booking integration"],
     highlighted: true,
   },
@@ -70,7 +70,7 @@ const faqs = [
   {
     question: "What types of businesses do you work with?",
     answer:
-      "Realtors, home service companies, dentists, insurance agencies, and other local businesses that want more leads and less manual work.",
+      "We specialize in home service businesses — HVAC, plumbing, roofing, cleaning, and contractors — that want more booked jobs and less manual work. We also build the same systems for realtors, dental practices, and insurance agencies.",
   },
   {
     question: "How long does setup take?",
@@ -127,11 +127,11 @@ const outcomes = [
 ];
 
 const industries = [
-  "Realtors & Real Estate Teams",
-  "Home Services & Contractors",
-  "Dental Practices",
-  "Insurance Agencies",
-  "Local Service Brands",
+  "HVAC Companies",
+  "Plumbing Companies",
+  "Roofing & Remodeling",
+  "Home Cleaning Services",
+  "Electrical & Contractors",
 ];
 
 const engagementSteps = [
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="text-center lg:text-left">
             <div className="mb-6 inline-flex rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-300">
-              AI Automation for Local Service Businesses
+              AI Automation for Home Service Businesses
             </div>
 
             <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
@@ -200,8 +200,8 @@ export default function Home() {
             </h1>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-300 lg:mx-0 lg:text-lg">
-              Get a free AI Business Audit and a practical roadmap to capture more inquiries,
-              respond faster, and turn more conversations into booked appointments.
+              Get a free AI Business Audit and a practical roadmap built for home service companies — capture more inquiries,
+              respond faster, and turn more conversations into booked jobs.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
@@ -223,7 +223,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-300 lg:justify-start">
               <span>✔ Free 30-minute audit</span>
-              <span>✔ Built for local service businesses</span>
+              <span>✔ Built for home service companies</span>
             </div>
           </div>
 
@@ -283,7 +283,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
         <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-5 sm:p-6">
           <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
-            Built for local service businesses
+            Built for home service businesses
           </p>
           <div className="grid grid-cols-2 gap-3 text-center text-sm font-semibold text-slate-300 sm:grid-cols-3 lg:grid-cols-5">
             {industries.map((industry) => (
@@ -292,6 +292,9 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="mt-5 text-center text-sm text-slate-400">
+            Run a real estate, dental, or insurance business? We build the same lead-response system for you — just ask.
+          </p>
         </div>
       </section>
 
