@@ -1,3 +1,6 @@
+import ChatWidget from "./components/ChatWidget";
+import DemoSection from "./components/DemoSection";
+
 const services = [
   {
     title: "AI Chatbots",
@@ -50,7 +53,7 @@ const pricing = [
   {
     name: "Launch",
     price: "$499",
-    description: "A focused setup for local service businesses ready to capture, follow up, and book more leads.",
+    description: "A focused setup for home service businesses ready to capture, follow up, and book more jobs.",
     features: ["AI chatbot setup", "Lead response workflow", "Calendar booking integration"],
     highlighted: true,
   },
@@ -67,7 +70,7 @@ const faqs = [
   {
     question: "What types of businesses do you work with?",
     answer:
-      "Realtors, home service companies, dentists, insurance agencies, and other local businesses that want more leads and less manual work.",
+      "We specialize in home service businesses — HVAC, plumbing, roofing, cleaning, and contractors — that want more booked jobs and less manual work. We also build the same systems for realtors, dental practices, and insurance agencies.",
   },
   {
     question: "How long does setup take?",
@@ -105,28 +108,31 @@ const benefits = [
   },
 ];
 
-const testimonials = [
+const outcomes = [
   {
-    quote:
-      "Alyssa helped us fix our lead flow and reply faster than ever. It felt like we finally had a system instead of chaos.",
-    name: "Sarah M.",
-    role: "Business Owner",
+    title: "Every lead answered in under a minute",
+    description:
+      "Day, night, weekends — your AI assistant replies instantly, so a new inquiry never sits unanswered while a competitor books them first.",
   },
   {
-    quote:
-      "The automation was simple to implement and immediately made our process more efficient. We stopped missing opportunities right away.",
-    name: "Derek T.",
-    role: "Service Company Founder",
+    title: "Follow-up that doesn't quit after one try",
+    description:
+      "Most sales happen after multiple touches. Your system keeps following up by text and email until they book, reply, or opt out.",
   },
   {
-    quote:
-      "We were overwhelmed with leads and manual follow-up. Alyssa built a better process that helped us respond faster and book more calls.",
-    name: "Angela R.",
-    role: "Marketing Director",
+    title: "Booked calls, not phone tag",
+    description:
+      "Qualified leads go straight to your calendar. You show up to appointments with people who already know what you offer and what it costs.",
   },
 ];
 
-const clientLogos = ["Realtor Group", "BlueWave Homes", "Crest Dental", "Summit Services", "Clarity Insurance"];
+const industries = [
+  "HVAC Companies",
+  "Plumbing Companies",
+  "Roofing & Remodeling",
+  "Home Cleaning Services",
+  "Electrical & Contractors",
+];
 
 const engagementSteps = [
   {
@@ -149,15 +155,18 @@ export default function Home() {
       <nav className="sticky top-0 z-20 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <a href="#top" className="flex items-center gap-3 text-xl font-bold text-white">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 text-sm font-black text-slate-950">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-300 to-amber-600 text-sm font-black text-slate-950">
               A
             </span>
-            <span className="text-cyan-400">Alyssa AI Solutions</span>
+            <span className="text-amber-400">Alyssa AI Solutions</span>
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#services" className="transition hover:text-white">
               Services
+            </a>
+            <a href="#demo" className="transition hover:text-white">
+              Demo
             </a>
             <a href="#pricing" className="transition hover:text-white">
               Pricing
@@ -171,7 +180,7 @@ export default function Home() {
             href="https://calendly.com/alyssaboehman098/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-600 sm:px-5"
+            className="rounded-lg bg-amber-500 px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-amber-400 sm:px-5"
           >
             Book a Call
           </a>
@@ -181,18 +190,18 @@ export default function Home() {
       <section id="top" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="text-center lg:text-left">
-            <div className="mb-6 inline-flex rounded-full border border-cyan-500/40 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-300">
-              AI Automation for Local Service Businesses
+            <div className="mb-6 inline-flex rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-300">
+              AI Automation for Home Service Businesses
             </div>
 
             <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
               Stop Losing Leads to Slow Follow-Up
-              <span className="block text-cyan-400">and Manual Work</span>
+              <span className="block text-amber-400">and Manual Work</span>
             </h1>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-300 lg:mx-0 lg:text-lg">
-              Get a free AI Business Audit and a practical roadmap to capture more inquiries,
-              respond faster, and turn more conversations into booked appointments.
+              Get a free AI Business Audit and a practical roadmap built for home service companies — capture more inquiries,
+              respond faster, and turn more conversations into booked jobs.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
@@ -200,13 +209,13 @@ export default function Home() {
                 href="https://calendly.com/alyssaboehman098/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl bg-cyan-500 px-7 py-4 text-base font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600"
+                className="rounded-xl bg-amber-500 px-7 py-4 text-base font-bold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:bg-amber-400"
               >
                 Claim My Free AI Audit
               </a>
               <a
                 href="#services"
-                className="rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-4 text-base font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
+                className="rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-4 text-base font-semibold text-white transition hover:border-amber-400 hover:text-amber-300"
               >
                 View Services
               </a>
@@ -214,13 +223,13 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-300 lg:justify-start">
               <span>✔ Free 30-minute audit</span>
-              <span>✔ Built for local service businesses</span>
+              <span>✔ Built for home service companies</span>
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-2xl shadow-cyan-950/40 sm:p-6">
+          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-2xl shadow-amber-950/40 sm:p-6">
             <div className="mb-5 flex items-center justify-between">
-              <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">Business Snapshot</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-amber-300">Business Snapshot</p>
               <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-300">
                 Live opportunities
               </span>
@@ -229,28 +238,28 @@ export default function Home() {
             <div className="space-y-4">
               <div className="rounded-2xl bg-slate-950 p-4">
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Response time</p>
-                <p className="mt-2 text-3xl font-black text-cyan-400">Instant</p>
+                <p className="mt-2 text-3xl font-black text-amber-400">Instant</p>
               </div>
 
               <div className="space-y-3 rounded-2xl bg-slate-950 p-4">
                 <div className="flex items-center justify-between text-sm text-slate-300">
                   <span>Lead capture</span>
-                  <span className="font-semibold text-white">94%</span>
+                  <span className="font-semibold text-white">Every inquiry</span>
                 </div>
                 <div className="h-2 rounded-full bg-slate-800">
-                  <div className="h-2 w-[94%] rounded-full bg-cyan-500" />
+                  <div className="h-2 w-full rounded-full bg-amber-500" />
                 </div>
 
                 <div className="flex items-center justify-between text-sm text-slate-300">
                   <span>Follow-up speed</span>
-                  <span className="font-semibold text-white">2 min</span>
+                  <span className="font-semibold text-white">Under 1 min</span>
                 </div>
                 <div className="h-2 rounded-full bg-slate-800">
-                  <div className="h-2 w-[85%] rounded-full bg-cyan-500" />
+                  <div className="h-2 w-[92%] rounded-full bg-amber-500" />
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-4 text-sm text-slate-200">
+              <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-slate-200">
                 “Most businesses lose leads because they respond too slowly or not at all.”
               </div>
             </div>
@@ -263,7 +272,7 @@ export default function Home() {
           <div className="grid gap-4 text-center sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="stat-card rounded-2xl bg-slate-950/60 p-5">
-                <div className="text-3xl font-black text-cyan-400 tabular-nums">{stat.value}</div>
+                <div className="text-3xl font-black text-amber-400 tabular-nums">{stat.value}</div>
                 <div className="mt-2 text-sm text-slate-300">{stat.label}</div>
               </div>
             ))}
@@ -274,28 +283,31 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
         <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-5 sm:p-6">
           <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
-            Trusted by growing local brands
+            Built for home service businesses
           </p>
           <div className="grid grid-cols-2 gap-3 text-center text-sm font-semibold text-slate-300 sm:grid-cols-3 lg:grid-cols-5">
-            {clientLogos.map((logo) => (
-              <div key={logo} className="rounded-2xl border border-slate-800 bg-slate-950/60 px-3 py-4 tracking-wide">
-                {logo}
+            {industries.map((industry) => (
+              <div key={industry} className="rounded-2xl border border-slate-800 bg-slate-950/60 px-3 py-4 tracking-wide">
+                {industry}
               </div>
             ))}
           </div>
+          <p className="mt-5 text-center text-sm text-slate-400">
+            Run a real estate, dental, or insurance business? We build the same lead-response system for you — just ask.
+          </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Why choose us</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Why choose us</p>
           <h2 className="text-3xl font-black sm:text-4xl">A smart system built for growth, not guesswork</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/10 text-lg font-bold text-cyan-300">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 text-lg font-bold text-amber-300">
                 ✓
               </div>
               <h3 className="mb-3 text-xl font-bold text-white">{benefit.title}</h3>
@@ -307,38 +319,49 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Results</p>
-          <h2 className="text-3xl font-black sm:text-4xl">What business owners are saying</h2>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">The Alyssa Difference</p>
+          <h2 className="text-3xl font-black sm:text-4xl">What changes when your follow-up runs itself</h2>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-              <div className="mb-5 flex gap-1 text-cyan-400">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <span key={`${testimonial.name}-${index}`}>★</span>
-                ))}
+          {outcomes.map((outcome) => (
+            <div key={outcome.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 text-lg font-bold text-amber-300">
+                ✓
               </div>
-              <p className="mb-5 text-base leading-relaxed text-slate-200">“{testimonial.quote}”</p>
-              <div>
-                <p className="font-bold text-white">{testimonial.name}</p>
-                <p className="text-sm text-slate-400">{testimonial.role}</p>
-              </div>
+              <h3 className="mb-3 text-xl font-bold text-white">{outcome.title}</h3>
+              <p className="text-sm leading-relaxed text-slate-300">{outcome.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 rounded-3xl border border-amber-500/30 bg-amber-500/5 p-6 text-center sm:p-8">
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200">
+            <span className="font-bold text-white">Work directly with Alyssa —</span> Start with a free
+            30-minute AI Business Audit. If I can&apos;t show you a clear, practical way to save time or book
+            more calls, you keep the roadmap and pay nothing. No pressure, no obligation.
+          </p>
+          <a
+            href="https://calendly.com/alyssaboehman098/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex rounded-xl bg-amber-500 px-6 py-3 font-bold text-slate-950 transition hover:bg-amber-400"
+          >
+            Claim My Free AI Audit
+          </a>
         </div>
       </section>
 
       <section id="services" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Services</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Services</p>
           <h2 className="text-3xl font-black sm:text-4xl">Automation that saves time and converts more leads</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           {services.map((service) => (
             <div key={service.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-lg shadow-slate-950/30">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/10 text-xl text-cyan-300">
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 text-xl text-amber-300">
                 ✦
               </div>
               <h3 className="mb-3 text-2xl font-bold">{service.title}</h3>
@@ -348,16 +371,18 @@ export default function Home() {
         </div>
       </section>
 
+      <DemoSection />
+
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Process</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Process</p>
           <h2 className="text-3xl font-black sm:text-4xl">A simple path from missed leads to more booked calls</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {steps.map((step) => (
             <div key={step.title} className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-              <h3 className="mb-3 text-2xl font-bold text-cyan-400">{step.title}</h3>
+              <h3 className="mb-3 text-2xl font-bold text-amber-400">{step.title}</h3>
               <p className="text-slate-300">{step.description}</p>
             </div>
           ))}
@@ -366,7 +391,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">How to get started</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">How to get started</p>
           <h2 className="text-3xl font-black sm:text-4xl">A clear path to your first automation win</h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-300">
             No long-term commitment is required to begin. We start with one measurable problem and build from there.
@@ -375,7 +400,7 @@ export default function Home() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {engagementSteps.map((step) => (
-            <div key={step.title} className="rounded-3xl border border-cyan-500/20 bg-cyan-500/5 p-6">
+            <div key={step.title} className="rounded-3xl border border-amber-500/20 bg-amber-500/5 p-6">
               <h3 className="mb-3 text-xl font-bold text-white">{step.title}</h3>
               <p className="text-sm leading-relaxed text-slate-300">{step.description}</p>
             </div>
@@ -385,7 +410,7 @@ export default function Home() {
 
       <section id="pricing" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Pricing</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Pricing</p>
           <h2 className="text-3xl font-black sm:text-4xl">Choose a path that fits your business</h2>
         </div>
 
@@ -395,14 +420,14 @@ export default function Home() {
               key={plan.name}
               className={`rounded-3xl border p-6 ${
                 plan.highlighted
-                  ? "border-cyan-400 bg-cyan-500/5 shadow-xl shadow-cyan-500/10"
+                  ? "border-amber-400 bg-amber-500/5 shadow-xl shadow-amber-500/10"
                   : "border-slate-800 bg-slate-900"
               }`}
             >
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-2xl font-bold">{plan.name}</h3>
                 {plan.highlighted ? (
-                  <span className="rounded-full bg-cyan-500 px-2.5 py-1 text-xs font-semibold text-slate-950">
+                  <span className="rounded-full bg-amber-500 px-2.5 py-1 text-xs font-semibold text-slate-950">
                     Most Popular
                   </span>
                 ) : null}
@@ -414,7 +439,7 @@ export default function Home() {
               <ul className="space-y-3 text-sm text-slate-200">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
-                    <span className="mt-1 text-cyan-300">✔</span>
+                    <span className="mt-1 text-amber-300">✔</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -426,8 +451,8 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={`mt-6 inline-flex w-full justify-center rounded-xl px-4 py-3 font-semibold transition ${
                   plan.highlighted
-                    ? "bg-cyan-500 text-white hover:bg-cyan-600"
-                    : "border border-slate-700 bg-slate-950 text-white hover:border-cyan-400 hover:text-cyan-300"
+                    ? "bg-amber-500 font-bold text-slate-950 hover:bg-amber-400"
+                    : "border border-slate-700 bg-slate-950 text-white hover:border-amber-400 hover:text-amber-300"
                 }`}
               >
                 {plan.name === "Audit" ? "Book My Audit" : "Talk to Alyssa"}
@@ -438,10 +463,10 @@ export default function Home() {
       </section>
 
       <section id="contact" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-        <div className="rounded-[2rem] border border-cyan-500/20 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/30 p-6 sm:p-8 lg:p-10">
+        <div className="rounded-[2rem] border border-amber-500/20 bg-gradient-to-br from-slate-900 via-slate-900 to-amber-950/40 p-6 sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Contact</p>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Contact</p>
               <h2 className="text-3xl font-black sm:text-4xl">Let&apos;s build a smarter growth system for your business</h2>
               <p className="mt-4 max-w-xl text-base text-slate-300">
                 If you&apos;re tired of missed leads, manual follow-up, and repetitive admin work, let&apos;s find the first workflow worth fixing.
@@ -456,7 +481,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Email</p>
-                  <a href="mailto:alyssaboehman098@gmail.com" className="mt-1 inline-block text-base text-cyan-300 hover:text-cyan-200">
+                  <a href="mailto:alyssaboehman098@gmail.com" className="mt-1 inline-block text-base text-amber-300 hover:text-amber-200">
                     alyssaboehman098@gmail.com
                   </a>
                 </div>
@@ -470,7 +495,7 @@ export default function Home() {
                 href="https://calendly.com/alyssaboehman098/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full justify-center rounded-xl bg-cyan-500 px-5 py-3.5 font-semibold text-white transition hover:bg-cyan-600"
+                className="mt-6 inline-flex w-full justify-center rounded-xl bg-amber-500 px-5 py-3.5 font-bold text-slate-950 transition hover:bg-amber-400"
               >
                 Schedule a Discovery Call
               </a>
@@ -504,7 +529,7 @@ export default function Home() {
             href="https://calendly.com/alyssaboehman098/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xl bg-cyan-500 px-8 py-4 text-base font-bold text-white transition hover:bg-cyan-600"
+            className="rounded-xl bg-amber-500 px-8 py-4 text-base font-bold text-slate-950 transition hover:bg-amber-400"
           >
             Claim My Free AI Audit
           </a>
@@ -516,19 +541,21 @@ export default function Home() {
           href="https://calendly.com/alyssaboehman098/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center rounded-xl bg-cyan-500 px-5 py-3 text-base font-bold text-white"
+          className="flex w-full items-center justify-center rounded-xl bg-amber-500 px-5 py-3 text-base font-bold text-slate-950"
         >
           Claim My Free AI Audit
         </a>
       </div>
 
       <footer className="border-t border-slate-800 py-10 text-center">
-        <h3 className="mb-2 text-xl font-bold text-cyan-400">Alyssa AI Solutions</h3>
+        <h3 className="mb-2 text-xl font-bold text-amber-400">Alyssa AI Solutions</h3>
         <p className="text-slate-400">Owensboro, Kentucky</p>
-        <a href="mailto:alyssaboehman098@gmail.com" className="mt-2 inline-block text-slate-400 transition hover:text-cyan-300">
+        <a href="mailto:alyssaboehman098@gmail.com" className="mt-2 inline-block text-slate-400 transition hover:text-amber-300">
           alyssaboehman098@gmail.com
         </a>
       </footer>
+
+      <ChatWidget />
     </main>
   );
 }
