@@ -1,3 +1,6 @@
+import ChatWidget from "./components/ChatWidget";
+import DemoSection from "./components/DemoSection";
+
 const services = [
   {
     title: "AI Chatbots",
@@ -158,6 +161,9 @@ export default function Home() {
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#services" className="transition hover:text-white">
               Services
+            </a>
+            <a href="#demo" className="transition hover:text-white">
+              Demo
             </a>
             <a href="#pricing" className="transition hover:text-white">
               Pricing
@@ -348,6 +354,8 @@ export default function Home() {
         </div>
       </section>
 
+      <DemoSection />
+
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Process</p>
@@ -529,6 +537,8 @@ export default function Home() {
           alyssaboehman098@gmail.com
         </a>
       </footer>
+
+      <ChatWidget />
     </main>
   );
 }
