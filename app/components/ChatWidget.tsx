@@ -112,7 +112,7 @@ export default function ChatWidget() {
         <button
           onClick={() => setOpen(true)}
           aria-label="Chat with Alyssa's AI assistant"
-          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 rounded-full bg-cyan-500 px-5 py-3.5 font-bold text-white shadow-xl shadow-cyan-500/30 transition hover:bg-cyan-600 sm:bottom-6 sm:right-6"
+          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 rounded-full bg-amber-500 px-5 py-3.5 font-bold text-slate-950 shadow-xl shadow-amber-500/30 transition hover:bg-amber-400 sm:bottom-6 sm:right-6"
         >
           <span aria-hidden="true">💬</span> Chat with us
         </button>
@@ -120,12 +120,12 @@ export default function ChatWidget() {
 
       {open && (
         <div className="fixed bottom-24 right-4 z-40 flex h-[480px] max-h-[70vh] w-[calc(100vw-2rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-slate-700 bg-slate-900 shadow-2xl sm:bottom-6 sm:right-6">
-          <div className="flex items-center justify-between bg-cyan-500 px-5 py-4">
+          <div className="flex items-center justify-between bg-amber-500 px-5 py-4">
             <div>
-              <p className="font-bold text-white">Alyssa AI Assistant</p>
-              <p className="text-xs text-cyan-50">Typically replies instantly • 24/7</p>
+              <p className="font-bold text-slate-950">Alyssa AI Assistant</p>
+              <p className="text-xs text-slate-800">Typically replies instantly • 24/7</p>
             </div>
-            <button onClick={() => setOpen(false)} aria-label="Close chat" className="rounded-full bg-white/20 px-3 py-1 font-bold text-white hover:bg-white/30">
+            <button onClick={() => setOpen(false)} aria-label="Close chat" className="rounded-full bg-slate-950/10 px-3 py-1 font-bold text-slate-950 hover:bg-slate-950/20">
               ✕
             </button>
           </div>
@@ -133,7 +133,7 @@ export default function ChatWidget() {
           <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${m.from === "user" ? "bg-cyan-500 text-white" : "bg-slate-800 text-slate-100"}`}>
+                <div className={`max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${m.from === "user" ? "bg-amber-500 font-medium text-slate-950" : "bg-slate-800 text-slate-100"}`}>
                   {m.text}
                 </div>
               </div>
@@ -143,10 +143,10 @@ export default function ChatWidget() {
 
           {leadStep === "done" && (
             <div className="flex gap-2 px-4 pb-2">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-xl bg-cyan-500 px-3 py-2.5 text-center text-sm font-bold text-white hover:bg-cyan-600">
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-xl bg-amber-500 px-3 py-2.5 text-center text-sm font-bold text-slate-950 hover:bg-amber-400">
                 Book on Calendly
               </a>
-              <a href={mailtoHref} className="flex-1 rounded-xl border border-slate-600 px-3 py-2.5 text-center text-sm font-semibold text-white hover:border-cyan-400">
+              <a href={mailtoHref} className="flex-1 rounded-xl border border-slate-600 px-3 py-2.5 text-center text-sm font-semibold text-white hover:border-amber-400">
                 Email Alyssa my details
               </a>
             </div>
@@ -154,11 +154,11 @@ export default function ChatWidget() {
 
           <div className="flex flex-wrap gap-2 px-4 pb-2">
             {QUICK.map((q) => (
-              <button key={q} onClick={() => send(q)} className="rounded-full border border-slate-600 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">
+              <button key={q} onClick={() => send(q)} className="rounded-full border border-slate-600 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:border-amber-400 hover:text-amber-300">
                 {q}
               </button>
             ))}
-            <button onClick={() => send("Get my free audit")} className="rounded-full bg-cyan-500/15 px-3 py-1.5 text-xs font-bold text-cyan-300 transition hover:bg-cyan-500/25">
+            <button onClick={() => send("Get my free audit")} className="rounded-full bg-amber-500/15 px-3 py-1.5 text-xs font-bold text-amber-300 transition hover:bg-amber-500/25">
               Get my free audit
             </button>
           </div>
@@ -171,9 +171,9 @@ export default function ChatWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message…"
-              className="flex-1 rounded-xl border border-slate-700 bg-slate-950 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none"
+              className="flex-1 rounded-xl border border-slate-700 bg-slate-950 px-3 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-amber-400 focus:outline-none"
             />
-            <button type="submit" className="rounded-xl bg-cyan-500 px-4 py-2.5 text-sm font-bold text-white hover:bg-cyan-600">
+            <button type="submit" className="rounded-xl bg-amber-500 px-4 py-2.5 text-sm font-bold text-slate-950 hover:bg-amber-400">
               Send
             </button>
           </form>

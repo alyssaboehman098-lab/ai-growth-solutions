@@ -93,7 +93,7 @@ export default function DemoSection() {
   return (
     <section id="demo" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <div className="mb-10 text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Demo</p>
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Demo</p>
         <h2 className="text-3xl font-black sm:text-4xl">See it in action</h2>
         <p className="mx-auto mt-4 max-w-2xl text-slate-300">
           This is what happens, automatically, when a lead reaches out to a business using Alyssa AI Solutions. Pick a scenario and watch it play out.
@@ -105,7 +105,7 @@ export default function DemoSection() {
           <button
             key={d.id}
             onClick={() => setActiveId(d.id)}
-            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${d.id === activeId ? "bg-cyan-500 text-white" : "border border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-400 hover:text-cyan-300"}`}
+            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${d.id === activeId ? "bg-amber-500 text-slate-950" : "border border-slate-700 bg-slate-900 text-slate-200 hover:border-amber-400 hover:text-amber-300"}`}
           >
             {d.label}
           </button>
@@ -121,7 +121,7 @@ export default function DemoSection() {
               <p key={i} className="text-center text-xs font-medium uppercase tracking-wide text-slate-500">{m.text}</p>
             ) : (
               <div key={i} className={`flex ${m.from === "ai" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${m.from === "ai" ? "bg-cyan-500 text-white" : "bg-slate-800 text-slate-100"}`}>
+                <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${m.from === "ai" ? "bg-amber-500 font-medium text-slate-950" : "bg-slate-800 text-slate-100"}`}>
                   <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide opacity-75">
                     {m.from === "ai" ? "AI Assistant" : "Customer"}
                   </span>
@@ -134,24 +134,24 @@ export default function DemoSection() {
         </div>
 
         {done && (
-          <div className="mt-6 rounded-2xl border border-cyan-500/25 bg-cyan-500/5 p-5 text-center">
-            <p className="font-bold text-cyan-300">{active.outcomeTitle}</p>
+          <div className="mt-6 rounded-2xl border border-amber-500/25 bg-amber-500/5 p-5 text-center">
+            <p className="font-bold text-amber-300">{active.outcomeTitle}</p>
             <p className="mt-2 text-sm text-slate-300">{active.outcomeText}</p>
           </div>
         )}
 
         <div className="mt-6 flex justify-center">
-          <button onClick={() => setRunKey((k) => k + 1)} className="rounded-xl border border-slate-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300">
+          <button onClick={() => setRunKey((k) => k + 1)} className="rounded-xl border border-slate-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-amber-400 hover:text-amber-300">
             ↻ Replay demo
           </button>
         </div>
       </div>
 
       <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-        <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-cyan-500 px-7 py-4 text-center text-base font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-600">
+        <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-amber-500 px-7 py-4 text-center text-base font-bold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:bg-amber-400">
           Want this for your business? Book a free audit
         </a>
-        <button onClick={openChat} className="rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-4 text-base font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300">
+        <button onClick={openChat} className="rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-4 text-base font-semibold text-white transition hover:border-amber-400 hover:text-amber-300">
           Try the live assistant
         </button>
       </div>
