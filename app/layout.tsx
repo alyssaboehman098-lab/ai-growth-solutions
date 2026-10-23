@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const siteTitle = "Alyssa AI Solutions | AI Chat & Lead Follow-Up for Home Service Businesses";
 const siteDescription =
-  "AI chat, missed-call text-back & instant lead follow-up for HVAC, plumbing, roofing & cleaning companies in the Owensboro, KY area. Free AI audit.";
+  "AI chat, missed-call text-back & instant lead follow-up for HVAC, plumbing, roofing & cleaning companies in the Owensboro, KY & Tri-State area (Evansville, Henderson & Daviess County). Free AI audit.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -57,7 +57,12 @@ const jsonLd = {
     addressRegion: "KY",
     addressCountry: "US",
   },
-  areaServed: "US",
+  areaServed: [
+    { "@type": "City", name: "Owensboro, KY" },
+    { "@type": "City", name: "Evansville, IN" },
+    { "@type": "City", name: "Henderson, KY" },
+    { "@type": "AdministrativeArea", name: "Daviess County, KY" },
+  ],
 };
 
 const faqJsonLd = {
