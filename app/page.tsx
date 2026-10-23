@@ -1,5 +1,6 @@
 import ChatWidget from "./components/ChatWidget";
 import DemoSection from "./components/DemoSection";
+import LeadMagnet from "./components/LeadMagnet";
 
 const services = [
   {
@@ -80,6 +81,41 @@ const faqs = [
   {
     question: "Do I need technical experience?",
     answer: "No. Everything is handled for you and designed to be simple, effective, and easy to manage.",
+  },
+  {
+    question: "How much does it cost?",
+    answer:
+      "The AI Business Audit is free. Launch setup is $499 one time — that covers your AI chatbot, lead response workflow, and calendar booking integration. Growth is a custom monthly plan for deeper automation, quoted on your audit call. No surprises, and you see the full price before you commit to anything.",
+  },
+  {
+    question: "What happens on the free AI Business Audit?",
+    answer:
+      "It's a 30-minute call where we review your website, your lead flow, and your after-hours coverage, and show you exactly where jobs are leaking. You get a practical roadmap either way — if we're a fit, we'll talk about building it; if we're not, the roadmap is yours to keep.",
+  },
+  {
+    question: "Will this work with my current website and tools?",
+    answer:
+      "Yes. The chat and follow-up system bolt onto your existing website and calendar — nothing to rebuild and no platforms to switch. If your customers can find you today, this makes sure none of them slip away.",
+  },
+  {
+    question: "I already have someone answering calls / a chat on my site. Is this still useful?",
+    answer:
+      "If it's only staffed during business hours, yes. Most missed jobs happen after hours and on weekends, when homeowners with a burst pipe or a dead AC won't wait until morning. This system answers in under a minute, 24/7, and keeps following up until they book.",
+  },
+  {
+    question: "Do you require a long-term contract?",
+    answer:
+      "No. Start with the free audit and the one-time Launch setup. If you want ongoing help, Growth support is month-to-month — you stay because it's working, not because a contract says you have to.",
+  },
+  {
+    question: "What do you need from me to get started?",
+    answer:
+      "One 30-minute call and access to your website and calendar. Alyssa handles the setup from there, and most systems are live within a few days.",
+  },
+  {
+    question: "Who owns my leads and customer data?",
+    answer:
+      "You do, always. The system runs on your accounts, your leads and customer data stay yours, and they're never sold or shared.",
   },
 ];
 
@@ -195,8 +231,8 @@ export default function Home() {
             </div>
 
             <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              Stop Losing Leads to Slow Follow-Up
-              <span className="block text-amber-400">and Manual Work</span>
+              Turn Missed Calls Into
+              <span className="block text-amber-400">Booked Jobs — Automatically</span>
             </h1>
 
             <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-300 lg:mx-0 lg:text-lg">
@@ -372,6 +408,8 @@ export default function Home() {
       </section>
 
       <DemoSection />
+
+      <LeadMagnet />
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-10 text-center">
